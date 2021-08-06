@@ -1,9 +1,9 @@
 
 .App {
   text-align: center;
-  background-image: url("./img/main.png");
+  background-image: url("./img/main_new.png");
   width: 474px;
-  height: 677px;
+  height: 474px;
 
 }
 
@@ -37,7 +37,7 @@
 
 .avatar-two{
   position: absolute;
-  top: 603px;
+  top: 400px;
   left : 395px;
   height: 48px;
   width: 48px;
@@ -53,7 +53,7 @@
   left : 8px; 
   display: block;
   width: 358px;
-  height: 421px;
+  height: 218px;
   text-align: left;
   word-wrap:break-word;
   overflow:auto;
