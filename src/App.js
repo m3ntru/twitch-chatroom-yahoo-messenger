@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React, { useEffect, useRef } from 'react';
+import avatar1 from './img/avatar1.gif';
+import avatar2 from './img/avatar2.gif';
+import { Chatbox } from './Chatbox';
 import './App.css';
 
 function App() {
+  const paramsTitle = new URLSearchParams(window.location.search).get("title");
+  const paramsStatus = new URLSearchParams(window.location.search).get("status");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="title">{paramsTitle}</div>
+      <div className="status">{paramsStatus}</div>
+      <Chatbox />
+      <img className="avatar-one" src={avatar1} alt="avatar1" />
+      <img className="avatar-two" src={avatar2} alt="avatar2" />
     </div>
   );
 }

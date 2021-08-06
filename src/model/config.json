@@ -1,0 +1,8 @@
+{
+  "BTTV": true,
+  "FFZ": true,
+  "client_id": "apbhlybpld3ybc6grv5c118xqpoz01c",
+  "bot_command": true,
+  "bot_list": ["nightbot","moobot"],
+  "LINE_MAX": 15
+}
