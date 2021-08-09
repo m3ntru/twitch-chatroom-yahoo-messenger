@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/twitch-chatroom-yahoo-messenger/static/css/main.9f50f14a.chunk.css",
-    "main.js": "/twitch-chatroom-yahoo-messenger/static/js/main.43a6c4ac.chunk.js",
-    "main.js.map": "/twitch-chatroom-yahoo-messenger/static/js/main.43a6c4ac.chunk.js.map",
+    "main.css": "/twitch-chatroom-yahoo-messenger/static/css/main.a0dce370.chunk.css",
+    "main.js": "/twitch-chatroom-yahoo-messenger/static/js/main.c67f9c82.chunk.js",
+    "main.js.map": "/twitch-chatroom-yahoo-messenger/static/js/main.c67f9c82.chunk.js.map",
     "runtime-main.js": "/twitch-chatroom-yahoo-messenger/static/js/runtime-main.708c17dd.js",
     "runtime-main.js.map": "/twitch-chatroom-yahoo-messenger/static/js/runtime-main.708c17dd.js.map",
-    "static/js/2.1551e049.chunk.js": "/twitch-chatroom-yahoo-messenger/static/js/2.1551e049.chunk.js",
-    "static/js/2.1551e049.chunk.js.map": "/twitch-chatroom-yahoo-messenger/static/js/2.1551e049.chunk.js.map",
+    "static/js/2.78599870.chunk.js": "/twitch-chatroom-yahoo-messenger/static/js/2.78599870.chunk.js",
+    "static/js/2.78599870.chunk.js.map": "/twitch-chatroom-yahoo-messenger/static/js/2.78599870.chunk.js.map",
     "static/js/3.c3df5b63.chunk.js": "/twitch-chatroom-yahoo-messenger/static/js/3.c3df5b63.chunk.js",
     "static/js/3.c3df5b63.chunk.js.map": "/twitch-chatroom-yahoo-messenger/static/js/3.c3df5b63.chunk.js.map",
     "index.html": "/twitch-chatroom-yahoo-messenger/index.html",
-    "static/css/main.9f50f14a.chunk.css.map": "/twitch-chatroom-yahoo-messenger/static/css/main.9f50f14a.chunk.css.map",
-    "static/js/2.1551e049.chunk.js.LICENSE.txt": "/twitch-chatroom-yahoo-messenger/static/js/2.1551e049.chunk.js.LICENSE.txt",
+    "static/css/main.a0dce370.chunk.css.map": "/twitch-chatroom-yahoo-messenger/static/css/main.a0dce370.chunk.css.map",
+    "static/js/2.78599870.chunk.js.LICENSE.txt": "/twitch-chatroom-yahoo-messenger/static/js/2.78599870.chunk.js.LICENSE.txt",
     "static/media/avatar1.911a71ae.gif": "/twitch-chatroom-yahoo-messenger/static/media/avatar1.911a71ae.gif",
     "static/media/avatar2.cb6b6c66.gif": "/twitch-chatroom-yahoo-messenger/static/media/avatar2.cb6b6c66.gif",
     "static/media/App.css": "/twitch-chatroom-yahoo-messenger/static/media/main_new.8151faea.png"
   },
   "entrypoints": [
     "static/js/runtime-main.708c17dd.js",
-    "static/js/2.1551e049.chunk.js",
-    "static/css/main.9f50f14a.chunk.css",
-    "static/js/main.43a6c4ac.chunk.js"
+    "static/js/2.78599870.chunk.js",
+    "static/css/main.a0dce370.chunk.css",
+    "static/js/main.c67f9c82.chunk.js"
   ]
 }
