@@ -81,3 +81,11 @@
   height: 48px;
   width: 48px;
 }
+
+.badge{
+  height: 18px;
+  min-width: 18px;
+  margin-left: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}

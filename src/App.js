@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import avatar1 from './img/avatar1.gif';
 import avatar2 from './img/avatar2.gif';
 import { Chatbox } from './Chatbox';

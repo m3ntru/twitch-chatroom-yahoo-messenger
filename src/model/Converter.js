@@ -1,6 +1,5 @@
 import cheerJson from '../cheer.json'
 class Converter {
-
     splitTextV1 = (t, e, n, c, v) => {
         var r = [];
         function text(o, i) {
@@ -46,7 +45,7 @@ class Converter {
         return data;
     }
 
-    
+
     formatText = (t, e, n, z) => {
         var space = /\s+/g;
         //var comma = /,/g;
@@ -68,7 +67,7 @@ class Converter {
         var c = "";
         var b = l;
         var v = u;
-        v = this.formatTwitchEmotes(v,z);
+        v = this.formatTwitchEmotes(v, z);
         g.forEach((function (t) {
             var color, height;
             var i = parseInt(t[3]);
@@ -106,6 +105,36 @@ class Converter {
             };
         }
         return splitText.join('');
+    }
+
+    formatBttvEmotes = (text, emotes, code) => {
+        console.log(text);
+        console.log(emotes);
+        console.log(code);
+        var d = new RegExp("(".concat(code.join("|"), ")"), "g");
+        var y = text.match(d);
+        if (y) {
+            y.forEach((data, index) => {
+                var target = data.trim();
+                var temp = emotes.filter(x => x.code === target);
+                text = text.replace(target, `<img id="${index}" class="emoticon" src="//cdn.betterttv.net/emote/${temp[0].id}/1x">`)
+            });
+        }
+        return text;
+    }
+
+    formatFfzEmotes = (text, emotes, code) => {
+        var d = new RegExp("(".concat(code.join("|"), ")"), "g");
+        var y = text.match(d);
+        if (y) {
+            y.forEach((data, index) => {
+                var target = data.trim();
+                console.log(target);
+                var temp = emotes.filter(x => x.name === target);
+                text = text.replace(target, `<img id="${index}" class="emoticon" src="${temp[0].urls[1]}">`)
+            });
+        }
+        return text;
     }
 }
 
