@@ -28,7 +28,7 @@
   text-decoration:underline;
 }
 
-.avatar-one{
+.avatar-rival{
   position: absolute;
   top: 127px;
   left : 370px;
@@ -36,7 +36,14 @@
   width: 98px;
 }
 
-.avatar-two{
+.sleep{
+  position: absolute;
+  top: 80px;
+  left : 20px;
+}
+
+
+.avatar-self{
   position: absolute;
   top: 400px;
   left : 395px;

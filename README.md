@@ -7,6 +7,10 @@
 
 ## Version
 
+### version 0.1.4
+- 自定義大頭貼
+- 新增 sleep 參數
+
 ### version 0.1.3 
 - 新增 Twitch Badge 顯示
 - 支援 [BTTV Emotes](https://betterttv.com/emotes/top) 顯示
