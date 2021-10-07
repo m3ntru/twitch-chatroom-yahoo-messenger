@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/twitch-chatroom-yahoo-messenger/static/css/main.4f24685a.chunk.css",
-    "main.js": "/twitch-chatroom-yahoo-messenger/static/js/main.fb4fbe2b.chunk.js",
-    "main.js.map": "/twitch-chatroom-yahoo-messenger/static/js/main.fb4fbe2b.chunk.js.map",
+    "main.js": "/twitch-chatroom-yahoo-messenger/static/js/main.872e8bc0.chunk.js",
+    "main.js.map": "/twitch-chatroom-yahoo-messenger/static/js/main.872e8bc0.chunk.js.map",
     "runtime-main.js": "/twitch-chatroom-yahoo-messenger/static/js/runtime-main.1b8e77e8.js",
     "runtime-main.js.map": "/twitch-chatroom-yahoo-messenger/static/js/runtime-main.1b8e77e8.js.map",
     "static/js/2.7213fc76.chunk.js": "/twitch-chatroom-yahoo-messenger/static/js/2.7213fc76.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.1b8e77e8.js",
     "static/js/2.7213fc76.chunk.js",
     "static/css/main.4f24685a.chunk.css",
-    "static/js/main.fb4fbe2b.chunk.js"
+    "static/js/main.872e8bc0.chunk.js"
   ]
 }
