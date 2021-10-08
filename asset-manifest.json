@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/twitch-chatroom-yahoo-messenger/static/css/main.d86240d3.chunk.css",
-    "main.js": "/twitch-chatroom-yahoo-messenger/static/js/main.68b725c8.chunk.js",
-    "main.js.map": "/twitch-chatroom-yahoo-messenger/static/js/main.68b725c8.chunk.js.map",
+    "main.css": "/twitch-chatroom-yahoo-messenger/static/css/main.8cb2371b.chunk.css",
+    "main.js": "/twitch-chatroom-yahoo-messenger/static/js/main.e25c2e92.chunk.js",
+    "main.js.map": "/twitch-chatroom-yahoo-messenger/static/js/main.e25c2e92.chunk.js.map",
     "runtime-main.js": "/twitch-chatroom-yahoo-messenger/static/js/runtime-main.1b8e77e8.js",
     "runtime-main.js.map": "/twitch-chatroom-yahoo-messenger/static/js/runtime-main.1b8e77e8.js.map",
     "static/js/2.7213fc76.chunk.js": "/twitch-chatroom-yahoo-messenger/static/js/2.7213fc76.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.c1e15ccd.chunk.js": "/twitch-chatroom-yahoo-messenger/static/js/3.c1e15ccd.chunk.js",
     "static/js/3.c1e15ccd.chunk.js.map": "/twitch-chatroom-yahoo-messenger/static/js/3.c1e15ccd.chunk.js.map",
     "index.html": "/twitch-chatroom-yahoo-messenger/index.html",
-    "static/css/main.d86240d3.chunk.css.map": "/twitch-chatroom-yahoo-messenger/static/css/main.d86240d3.chunk.css.map",
+    "static/css/main.8cb2371b.chunk.css.map": "/twitch-chatroom-yahoo-messenger/static/css/main.8cb2371b.chunk.css.map",
     "static/js/2.7213fc76.chunk.js.LICENSE.txt": "/twitch-chatroom-yahoo-messenger/static/js/2.7213fc76.chunk.js.LICENSE.txt",
     "static/media/avatar1.911a71ae.gif": "/twitch-chatroom-yahoo-messenger/static/media/avatar1.911a71ae.gif",
     "static/media/avatar2.cb6b6c66.gif": "/twitch-chatroom-yahoo-messenger/static/media/avatar2.cb6b6c66.gif",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.1b8e77e8.js",
     "static/js/2.7213fc76.chunk.js",
-    "static/css/main.d86240d3.chunk.css",
-    "static/js/main.68b725c8.chunk.js"
+    "static/css/main.8cb2371b.chunk.css",
+    "static/js/main.e25c2e92.chunk.js"
   ]
 }
