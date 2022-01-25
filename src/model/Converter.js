@@ -100,7 +100,7 @@ class Converter {
                     var length = mote[1] - mote[0];
                     var empty = Array.apply(null, new Array(length + 1)).map(function () { return ''; });
                     splitText = splitText.slice(0, mote[0]).concat(empty).concat(splitText.slice(mote[1] + 1, splitText.length));
-                    splitText.splice(mote[0], 1, `<img class="emoticon" src="${link}${i}/default/dark/1.0">`);
+                    splitText.splice(mote[0], 1, `<img class="emoticon" src="${link}${i}/default/dark/4.0">`);
                 };
             };
         }
@@ -108,16 +108,13 @@ class Converter {
     }
 
     formatBttvEmotes = (text, emotes, code) => {
-        console.log(text);
-        console.log(emotes);
-        console.log(code);
         var d = new RegExp("(".concat(code.join("|"), ")"), "g");
         var y = text.match(d);
         if (y) {
             y.forEach((data, index) => {
                 var target = data.trim();
                 var temp = emotes.filter(x => x.code === target);
-                text = text.replace(target, `<img id="${index}" class="emoticon" src="//cdn.betterttv.net/emote/${temp[0].id}/1x">`)
+                text = text.replace(target, `<img id="${index}" class="emoticon" src="//cdn.betterttv.net/emote/${temp[0].id}/2x">`)
             });
         }
         return text;
@@ -129,7 +126,6 @@ class Converter {
         if (y) {
             y.forEach((data, index) => {
                 var target = data.trim();
-                console.log(target);
                 var temp = emotes.filter(x => x.name === target);
                 text = text.replace(target, `<img id="${index}" class="emoticon" src="${temp[0].urls[1]}">`)
             });

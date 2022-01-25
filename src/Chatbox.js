@@ -2,8 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import tmi from 'tmi.js'
 import Converter from './model/Converter';
 import parse from 'html-react-parser';
+import AudioPlayer from 'react-audio-player';
+import MsnSound from './sound/msn.mp3';
 
-export const Chatbox = () => {
+export const Chatbox = (props) => {
   const chatBoxref = useRef(null);
   const [badge, setBadge] = useState(null);
   const [bttv, setBttv] = useState([]);
@@ -20,6 +22,9 @@ export const Chatbox = () => {
       badge: null
     }
   ]);
+  const [sound, setSound] = useState(null);
+  //const [shakeCoolDown, setShakeCoolDown] = useState(false);
+  var shakeCoolDown = false;
 
   useEffect(() => {
     badgeInit();
@@ -133,12 +138,22 @@ export const Chatbox = () => {
         badge: null
       }
       ]);
+      console.log("2021/10/09 ver3");
     }).catch((err) => {
       console.log(err)
     });
 
     client.on("message", (target, context, msg, self) => {
-      messageUpdate(context, msg);
+      if (msg.split(' ')[0].toLowerCase() === "!叮咚") {
+        if (!shakeCoolDown) {
+          shakeWindow();
+          shakeCoolDown = true
+          setTimeout(() => shakeCoolDown = false, 10000);
+        }
+      }
+      else {
+        messageUpdate(context, msg, false);
+      }
     });
 
     client.on("timeout", (channel, username, reason, duration, userstate) => {
@@ -158,12 +173,14 @@ export const Chatbox = () => {
     });
 
     client.on('cheer', (channel, userstate, message) => {
+      setSound(MsnSound);
+      shakeWindow();
       var result = Converter.formatText(message, [".", "!", "?", ":", ";", ",", " "], 90, userstate.emotes);
-      messageUpdate(userstate, result.display)
+      messageUpdate(userstate, result.display, true)
     });
   };
 
-  const messageUpdate = (context, msg) => {
+  const messageUpdate = (context, msg, cheer) => {
     setMessges(preArray => {
       if (preArray.length === 15) {
         preArray.shift();
@@ -175,7 +192,8 @@ export const Chatbox = () => {
         id: context.username,
         color: context.color,
         emotes: context.emotes,
-        badge: context.badges
+        badge: context.badges,
+        cheer
       }
       ]
     });
@@ -185,31 +203,58 @@ export const Chatbox = () => {
     if (bgd) {
       return (
         Object.entries(bgd).map((data, index) => (
-          <span key={index} className="badge" style={{ background: 'url(' + badge[data[0]]['versions'][data[1]]['image_url_1x'] + ')' }}></span>
+          <img alt={index} key={index} src={badge[data[0]]['versions'][data[1]]['image_url_2x']} className="badge" style={{marginRight: "2px", marginLeft: "2px", height: "28px", width: "28px", verticalAlign: "bottom" }}/>
         ))
       )
     }
     else return null;
   }
 
+  const shakeWindow = () => {
+    const { handleShake } = props;
+    handleShake(true);
+    setMessges(preArray => [...preArray,
+    {
+      name: "System",
+      id: "System",
+      msg: "叮咚，有人在家嗎～～",
+      color: "#000000",
+      emotes: null,
+      badge: null
+    }
+    ]);
+    setTimeout(() => shakeEnd(), 400);
+  }
+
+  const shakeEnd = () => {
+    const { handleShake } = props;
+    handleShake(false);
+  }
+
 
   return (
-    <div className="shake-opacity ">
-      <div className="chat-box">
-        {messages.map((data, index) => (
-          (data.id == "System") ?
-            <div className="text" style={{ fontStyle: "italic", fontSize: "14px", color: "blue" }} key={index}>
-              {data.msg}
-            </div>
-            :
-            <div className="text" key={index}>
-              {getbadageurl(data.badge)}
-              <span style={{ fontWeight: "bold", color: data.color, fontSize: "14px", marginTop: "14px" }}>{data.name + ": "}</span>
-              {parse(Converter.formatFfzEmotes(Converter.formatBttvEmotes(Converter.formatTwitchEmotes(data.msg, data.emotes), bttv, bttvCode), ffz, ffzCode))}
-            </div>
-        ))}
-        <div ref={chatBoxref} />
-      </div>
+    <div className="chat-box">
+      {messages.map((data, index) => (
+        (data.id == "System") ?
+          <div className="text alert" style={{ fontWeight: "bolder", fontSize: "21px", color: "red", fontFamily: "PMingLiU" }} key={index}>
+            {data.msg}
+          </div>
+          :
+          <div className="text" key={index}>
+            {getbadageurl(data.badge)}
+            <span style={{marginRight: "2px", height: "28px", display: 'inline-block', color: data.color, fontWeight: "bold"}}>{data.name + ":  "}</span>
+            {(data.cheer)
+            ?parse(Converter.formatFfzEmotes(Converter.formatBttvEmotes(data.msg, bttv, bttvCode), ffz, ffzCode))
+            :parse(Converter.formatFfzEmotes(Converter.formatBttvEmotes(Converter.formatTwitchEmotes(data.msg, data.emotes), bttv, bttvCode), ffz, ffzCode))}
+          </div>
+      ))}
+      <div ref={chatBoxref} />
+      <AudioPlayer
+        src={sound}
+        title={""}
+        autoPlay
+        onEnded={() => setSound(null)}
+      />
     </div>
   );
 }

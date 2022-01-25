@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import avatar1 from './img/avatar1.gif';
 import avatar2 from './img/avatar2.gif';
 import sleep from './img/sleep.png';
@@ -14,20 +14,21 @@ function App() {
   const avatarRival = (paramsRival) ? `https://i.imgur.com/${paramsRival}` : avatar1;
   const avatarSelf = (paramsSelf) ? `https://i.imgur.com/${paramsSelf}` : avatar2;
   const isSleep = (paramsSleep == "true") ? true : false;
+  const [shake, setShake] = useState(false);
 
   return (
-    <div className="App">
+    <div className={(shake) ? 'App shake-hard shake-constant' : 'App'}>
       <div className="title">{paramsTitle}</div>
       <div className="status">{paramsStatus}</div>
-      <Chatbox />
+      <Chatbox handleShake={ (value) => setShake(value) } />
       <img className="avatar-rival" src={avatarRival} alt="avatarRival" />
       <img className="avatar-self" src={avatarSelf} alt="avatarSelf" />
       <img className="avatar-self" src={avatarSelf} alt="avatarSelf" />
-      {(isSleep)?
-      <img className="sleep" src={sleep} alt="sleep" />
-      :
-      ""
-      }
+      {(isSleep) ?
+        <img className="sleep" src={sleep} alt="sleep" />
+        :
+        ""
+      }   
     </div>
   );
 }
