@@ -1,6 +1,6 @@
 {
   "name": "twitch-chatroom-yahoo-messenger",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": true,
   "homepage": "http://m3ntru.github.io/twitch-chatroom-yahoo-messenger",
   "dependencies": {

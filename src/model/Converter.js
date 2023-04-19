@@ -108,7 +108,9 @@ class Converter {
     }
 
     formatBttvEmotes = (text, emotes, code) => {
-        var d = new RegExp("(".concat(code.join("|"), ")"), "g");
+        var d = new RegExp("( ".concat(code.join(" | "), " )"), "g");
+        console.log(d);
+        console.log("(".concat(code.join(" | "), ")"));
         var y = text.match(d);
         if (y) {
             y.forEach((data, index) => {

@@ -1,11 +1,23 @@
-# YahooMessenger Twitch Chatroom By M3ntru
+# YahooMessenger Twitch Chatroom For ICKID By M3ntru
 
-一個接受實況主好友 [ICKID](https://www.twitch.tv/ickid) 委託
-而製作的的仿製 YahooMessenger 風格聊天室 Layout
+一個受好友 [ICKID](https://www.twitch.tv/ickid) 委託
+而製作的的仿製 YahooMessenger 風格聊天室實況 Layout
 
 ![DEMO](https://i.imgur.com/QHnliBa.png)
 
 ## Version
+
+### version 0.2.1
+- README 更新
+
+### version 0.2.0
+- 更換字體
+- 版面更新
+- 畫面震動
+- Bug修復
+
+### version 0.1.5
+- README 更新
 
 ### version 0.1.4
 - 自定義大頭貼
@@ -31,8 +43,7 @@
 
 ## Reference
 
-- [crs-twitch-chat](https://github.com/crs38c28/crs-twitch-chat) By [ChRiS38c28](https://github.com/crs38c28) 
- 
+- [crs-twitch-chat](https://github.com/crs38c28/crs-twitch-chat) By [ChRiS38c28](https://github.com/crs38c28)  
 
 -------------------------
 
